@@ -103,7 +103,7 @@ class BlockDatum(object):
         return (self.total_extrapolated_land_value / self.total_land_area) if self.total_land_area > 0 else 0
 
 
-CSV_FILENAME = '/Users/jlhawn/Desktop/2019.8.12__SF_ASR_Secured_Roll_Data_2017-2018_0.csv'
+CSV_FILENAME = './2019.8.12__SF_ASR_Secured_Roll_Data_2017-2018_0.csv'
 
 # Open the property data file and load each row as a ParcelDatum
 all_parcels = []

@@ -18,5 +18,5 @@ the assesed value since the date of the last sale). This accounts for only
 13% of all parcels but includes nearly 82% of all city blocks.
 
 These sampled blocks have a total land area of 22 square miles (most of the
-habitable land in San Francisco) and estimates a total land value of $265 for
-those sampled blocks.
+habitable land in San Francisco) and estimates a total land value of $265
+Billion for those sampled blocks.

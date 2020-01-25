@@ -1,4 +1,5 @@
-import csv
+import csv, json
+import blockgeos
 
 def weighted_percentile(data, get_weight, get, percentile):
     if percentile <= 0:
@@ -221,7 +222,35 @@ def print_csv_data():
     for i in range(0, 101):
         print('{},{},{}'.format(i, assessed_per_sqft_pctl[i], extrapolated_per_sqft_pctl[i]))
 
+blocks_by_id = {b.block: b for b in sampled_blocks}
+block_features = blockgeos.get_block_geometry_feature_collection(blocks_by_id)
+
+with open('blocks.geojson', 'w') as outfile:
+    json.dump(block_features, outfile, indent='  ')
+
+# # Block Geometry
+
+# import geopandas, folium
+# from shapely.geometry import Polygon
+
+# # Lat, Long coordinates of San Francisco.
+# sf_coords = (37.76, -122.43)
+# # Coordinate Reference System.
+# wgs_world_mercator = 'EPSG:3395'
+
+# block_geos = blockgeos.get_block_geometries()
+
+# geo_map = folium.Map(sf_coords, zoom_start=12, tiles='cartodbpositron')
 
 
+# for i, block in enumerate(sampled_blocks):
+#     block_geo_points = block_geos.get(block.block, None)
+#     if block_geo_points is None:
+#         continue
+
+#     polygon_geom = Polygon(block_geo_points)
+#     polygon = geopandas.GeoDataFrame(index=[0], crs=wgs_world_mercator, geometry=[polygon_geom])
+#     folium.GeoJson(polygon).add_to(geo_map)
+#     print('{} of {}'.format(i, len(sampled_blocks)))
 
 

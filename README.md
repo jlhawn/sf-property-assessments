@@ -1,10 +1,8 @@
 # Estimated Land Value in San Francisco
 
-> *NOTE*: I am working on making a map of the 4,356 blocks in San Francisco
-> which were sampled to come up with the estimate of $265 Billion of total
-> land value.
+![Map of Land Value Per Square Foot by Block](./sf_extrapolated_land_value.png)
 
-![Land Value Per Square Foot by Block](./sf_land_value_per_square_foot.png)
+![Chart of Land Value Per Square Foot by Block](./sf_land_value_per_square_foot.png)
 
 This estimate looks at the 2018-19 property tax assessment data provided by
 the Office of the Assessor-Recorder of the City and County of San Francisco.
